@@ -1,4 +1,5 @@
 import entidades.Producto;
+import entidades.marca;
 
 public class Main {
     public static void main(String[] args) {
@@ -35,5 +36,20 @@ public class Main {
         producto4.mostrarProducto();
         Producto producto5 = new Producto(5, "Yamaha YY ", 2100000, 2);
         producto5.mostrarProducto();
+
+        marca marca1 =new marca("Zanella");
+
+        marca1.MostrarMarca();
+
+        marca objMarca= new marca ("Honda");
+        objMarca.MostrarMarca();
+
+        producto5.setNombreProducto("Yamaha zz ");
+        producto5.mostrarProducto();
+
+        objMarca.setNombre(" Marca 123 ");
+        objMarca.setId(1);
+
+        System.out.println(objMarca.toString());
     }
 }

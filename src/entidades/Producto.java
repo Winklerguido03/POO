@@ -7,6 +7,8 @@ public class Producto {
     private double Precio;
     private int StockActual;
 
+    private marca Marca;
+
     //metodo constructor
 
     public Producto() {
@@ -15,11 +17,13 @@ public class Producto {
         this.NombreProducto = "No Especificado ";
         this.Precio = 0;
         this.StockActual = 2;
+        this.Marca=new marca();
     }
 
     public Producto (int id,String NombreProducto) {
         this.id=id;
         this.NombreProducto=NombreProducto;
+        this.Marca=new marca();
     }
 
     public Producto (int id,String NombreProducto,double Precio,int StockActual) {
@@ -27,12 +31,13 @@ public class Producto {
         this.NombreProducto=NombreProducto;
         this.Precio=Precio;
         this.StockActual=StockActual;
+        this.Marca=new marca();
 
     }
 
     //metodos son funciones
     public void mostrarProducto() {
-        System.out.println(id + " " + NombreProducto + "Precio:$" + Precio + " Stock:" + StockActual);
+        System.out.println(id + " " + NombreProducto + "Precio:$" + Precio + " Stock:" + StockActual+ "Marca: "+Marca.toString());
     }
 
     public void setId(int id) {
